@@ -1,11 +1,15 @@
 import discord
 from coinmarketcapapi import CoinMarketCapAPI, CoinMarketCapAPIError
 import asyncio
-
+import os
+from dotenv import load_dotenv
 
 if __name__ == '__main__':
 
     cmc = CoinMarketCapAPI('4828dbc5-0d75-42fb-8374-9078e59a6004')
+
+    load_dotenv()
+    TOKEN = os.getenv("DISCORD_TOKEN")
 
     alert = []
 
@@ -150,7 +154,7 @@ if __name__ == '__main__':
                             removingAlert(alert[i],alert[i+1][j])
             except Exception as error:
                 print(error)
-            await asyncio.sleep(60)
+            await asyncio.sleep(120)
 
     @client.event
     async def on_message(message):
@@ -186,4 +190,4 @@ if __name__ == '__main__':
                 await message.channel.send(embed=discord.Embed(title="Error", description="Token ou monnaie introuvable.", color=discord.Colour.red()))
 
     client.loop.create_task(my_background_task())
-    client.run("NjczOTYxNDc2OTUxOTAwMjMx.XjhpiQ.Aa2dipHf9Lahzz6oKRoY1Q1hELg")
+    client.run(TOKEN)
