@@ -186,4 +186,4 @@ if __name__ == '__main__':
                 await message.channel.send(embed=discord.Embed(title="Error", description="Token ou monnaie introuvable.", color=discord.Colour.red()))
 
     client.loop.create_task(my_background_task())
-    client.run("NjczOTYxNDc2OTUxOTAwMjMx.XjhpiQ.LKWjJ9I87OYzHjmSZjanB2GuYKw")
+    client.run("NjczOTYxNDc2OTUxOTAwMjMx.XjhpiQ.Aa2dipHf9Lahzz6oKRoY1Q1hELg")
