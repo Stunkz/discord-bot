@@ -139,7 +139,7 @@ if __name__ == '__main__':
 
     async def my_background_task():
         await client.wait_until_ready()
-        channel = client.get_channel(id=822167509004058627)
+        channel = client.get_channel(id=922418862958444544)
         print(loading())
         while not client.is_closed():
             try:
