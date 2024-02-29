@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 if __name__ == '__main__':
 
-    cmc = CoinMarketCapAPI('4828dbc5-0d75-42fb-8374-9078e59a6004')
+    cmc = CoinMarketCapAPI('')
 
     load_dotenv()
     TOKEN = os.getenv("DISCORD_TOKEN")
